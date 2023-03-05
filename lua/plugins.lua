@@ -64,10 +64,16 @@ return require('packer').startup(function(use)
     })
 
     -- Project
-
+    use ({
+        'ahmedkhalf/project.nvim',
+        config = function() require('plugins.project') end
+    })
 
     -- Telescope
-    use 'nvim-telescope/telescope.nvim'
+    use ({
+        'nvim-telescope/telescope.nvim',
+        config = function() require('plugins.telescope') end
+    })
 
     -- Plenary
     use 'nvim-lua/plenary.nvim'
@@ -77,6 +83,9 @@ return require('packer').startup(function(use)
         'lewis6991/gitsigns.nvim',
         config = function() require('plugins.gitsigns') end
     })
+
+    -- Vim Rooter
+    use 'airblade/vim-rooter'
 
     -- Vimwiki
     use 'vimwiki/vimwiki'

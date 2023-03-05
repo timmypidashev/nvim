@@ -2,4 +2,6 @@
 require('options')
 require('plugins')
 require('keymaps')
-require('bookmarks')
+
+-- Launch project telescope view on startup
+vim.api.nvim_exec ([[ autocmd VimEnter * :Telescope projects ]], false)
