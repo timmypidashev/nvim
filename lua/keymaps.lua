@@ -78,3 +78,6 @@ keymap.set("n", "<D-t>", ":ToggleTerm<CR>")
 -- Gitsigns
 keymap.set("n", "<D-d>", ":Gitsigns toggle_linehl<CR><BAR> :Gitsigns toggle_deleted<CR>") 
 
+-- Telescope
+keymap.set("n", "<D-f>", ":Telescope current_buffer_fuzzy_find<CR>")
+keymap.set("n", "<D-Shift-f>", ":Telescope live_grep<CR>") --idk fix this future tim
