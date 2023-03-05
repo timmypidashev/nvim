@@ -84,6 +84,12 @@ return require('packer').startup(function(use)
         config = function() require('plugins.gitsigns') end
     })
 
+    -- Mason
+    use ({
+        'williamboman/mason.nvim',
+        requires = 'williamboman/mason-lspconfig.nvim',
+        --config = function() require('plugins.mason') end
+    })
     -- Vim Rooter
     use 'airblade/vim-rooter'
 
@@ -92,6 +98,9 @@ return require('packer').startup(function(use)
 
     -- Wakatime
     use 'wakatime/vim-wakatime'
+
+    -- TrueZen
+    use 'Pocco81/true-zen.nvim'
 
     if packer_bootstrap then
     require('packer').sync()
