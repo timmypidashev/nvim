@@ -14,10 +14,13 @@ opt.autoindent          = true      -- Automatically indent
 opt.number		        = true		-- Show the numberline
 opt.termguicolors       = true      -- Still don't know why this is here...
 
+-- Statusline
+opt.laststatus         = 3         -- Global statusline
+
 -- Gui configs
 if glob.neovide then
     vim.opt.guifont = { "ComicCode Nerd Font", ":h16" }     -- Font
     vim.g.neovide_scale_factor = 1.0                     -- Scaling
-    vim.g.neovide_scroll_animation_length = 0.5          -- Scroll
+    vim.g.neovide_scroll_animation_length = 0.3          -- Scroll
 
 end
