@@ -87,9 +87,17 @@ return require('packer').startup(function(use)
     -- Mason
     use ({
         'williamboman/mason.nvim',
-        requires = 'williamboman/mason-lspconfig.nvim',
-        --config = function() require('plugins.mason') end
+        requires = {'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'},
+        config = function() require('plugins.lspconfig') end
     })
+
+    -- Autocompletion and Snippets
+    use ({
+        'hrsh7th/nvim-cmp',
+        requires = {'hrsh7th/cmp-nvim-lsp'},
+        config = function() require('plugins.cmp') end
+    })
+
     -- Vim Rooter
     use 'airblade/vim-rooter'
 
