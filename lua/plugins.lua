@@ -1,5 +1,4 @@
 -- Shorten common nvim commands
-local fn = vim.fn
 local cmd = vim.cmd
 
 -- Load Packer
@@ -87,16 +86,27 @@ return require('packer').startup(function(use)
     -- Mason
     use ({
         'williamboman/mason.nvim',
-        requires = {'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'},
+        requires = {
+            'williamboman/mason-lspconfig.nvim',
+            'neovim/nvim-lspconfig'
+        },
         config = function() require('plugins.lspconfig') end
     })
 
     -- Autocompletion and Snippets
     use ({
         'hrsh7th/nvim-cmp',
-        requires = {'hrsh7th/cmp-nvim-lsp'},
+        requires = {
+            'hrsh7th/cmp-nvim-lsp',
+            'L3MON4D3/LuaSnip',
+            'saadparwaiz1/cmp_luasnip',
+            'rafamadriz/friendly-snippets'
+        },
         config = function() require('plugins.cmp') end
     })
+
+    -- Vim-Tig
+    use 'codeindulgence/vim-tig'
 
     -- Vim Rooter
     use 'airblade/vim-rooter'

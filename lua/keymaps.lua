@@ -69,7 +69,7 @@ vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true}
 
 
 -- NvimTree
-keymap.set("n", "<D-j>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<D-j>", ":NvimTreeFocus<CR>")
 
 -- Toggleterm
 keymap.set("n", "<D-t>", ":ToggleTerm<CR>")
