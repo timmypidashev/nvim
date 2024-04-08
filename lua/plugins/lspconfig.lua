@@ -13,13 +13,17 @@ require("mason").setup({
 require("mason-lspconfig").setup({
     ensure_installed = {
         -- Lua
-        "lua_ls"
+        "lua_ls",
+        "clangd",
+        "tsserver",
+        "quick_lint_js",
+        "html",
+        "cssls"
     }
 })
 
 -- Autocompletion capabilities
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 
 -- LSP Keybinds
 local on_attach = function(_, _)
@@ -46,3 +50,19 @@ require("lspconfig").lua_ls.setup {
         },
     },
 }
+
+require("lspconfig").tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = { },
+}
+
+
+require("lspconfig").clangd.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = { },
+}
+
+
+

@@ -9,14 +9,6 @@ require('smart-splits').setup({
   ignored_buftypes = { 'NvimTree' },
   -- the default number of lines/columns to resize by at a time
   default_amount = 3,
-  -- whether to wrap to opposite side when cursor is at an edge
-  -- e.g. by default, moving left at the left edge will jump
-  -- to the rightmost window, and vice versa, same for up/down.
-  wrap_at_edge = true,
-  -- when moving cursor between splits left or right,
-  -- place the cursor on the same row of the *screen*
-  -- regardless of line numbers. False by default.
-  -- Can be overridden via function parameter, see Usage.
   move_cursor_same_row = false,
   -- resize mode options
   resize_mode = {
@@ -45,7 +37,7 @@ require('smart-splits').setup({
     'WinEnter',
   },
   -- enable or disable the tmux integration
-  tmux_integration = true,
+  tmux_integration = false,
   -- disable tmux navigation if current tmux pane is zoomed
-  disable_tmux_nav_when_zoomed = true,
+  disable_tmux_nav_when_zoomed = false,
 })

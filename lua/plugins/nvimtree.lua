@@ -5,16 +5,13 @@ require("nvim-tree").setup({
     hijack_netrw = true,
     hijack_cursor = false,
     update_cwd = true,
-    view = {
-        hide_root_folder = true,
-        auto_resize = true
-    },
     filters = {
         dotfiles = true,
         custom = {},
     },
     renderer = {
        highlight_git = true,
+       root_folder_label = false,
     },
 })
 

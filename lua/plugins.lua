@@ -24,10 +24,10 @@ return require('packer').startup(function(use)
     })
 
     -- TPipeline
-    use ({
-        'vimpostor/vim-tpipeline',
-        config = function() require('plugins.tpipeline') end
-    })
+    --use ({
+    --    'vimpostor/vim-tpipeline',
+    --    config = function() require('plugins.tpipeline') end
+    --})
 
     -- Barbar
     use ({
@@ -62,20 +62,25 @@ return require('packer').startup(function(use)
         config = function() require('plugins.toggleterm') end
     })
 
-    -- Project
+    -- JSX PRETTY
     use ({
-        'ahmedkhalf/project.nvim',
-        config = function() require('plugins.project') end
+        'maxmellon/vim-jsx-pretty'
     })
+
+    -- Project
+    --use ({
+    --    'ahmedkhalf/project.nvim',
+    --    config = function() require('plugins.project') end
+    --})
 
     -- Telescope
-    use ({
-        'nvim-telescope/telescope.nvim',
-        config = function() require('plugins.telescope') end
-    })
+    --use ({
+    --    'nvim-telescope/telescope.nvim',
+    --    config = function() require('plugins.telescope') end
+    --})
 
     -- Plenary
-    use 'nvim-lua/plenary.nvim'
+    --use 'nvim-lua/plenary.nvim'
 
     -- Gitsigns
     use ({
@@ -96,32 +101,33 @@ return require('packer').startup(function(use)
     -- Autocompletion and Snippets
     use ({
         'hrsh7th/nvim-cmp',
-        requires = {
+       requires = {
             'hrsh7th/cmp-nvim-lsp',
             'L3MON4D3/LuaSnip',
             'saadparwaiz1/cmp_luasnip',
-            'rafamadriz/friendly-snippets'
+            --'rafamadriz/friendly-snippets'
         },
         config = function() require('plugins.cmp') end
     })
 
-    -- Vim-Tig
-    use 'codeindulgence/vim-tig'
-
-    -- Vim Rooter
-    use 'airblade/vim-rooter'
-
-    -- Vimwiki
-    use 'vimwiki/vimwiki'
-
-    -- Wakatime
     use 'wakatime/vim-wakatime'
 
-    -- TrueZen
-    use 'Pocco81/true-zen.nvim'
+    -- Colorizer
+    use ({
+        'norcalli/nvim-colorizer.lua',
+        config = function() require('plugins.colorizer') end
+    })
 
-    if packer_bootstrap then
-    require('packer').sync()
-  end
+    -- Vim-Tig
+    --use 'codeindulgence/vim-tig'
+
+    -- Vim Rooter
+    --use 'airblade/vim-rooter'
+
+    -- Vimwiki
+    --use 'vimwiki/vimwiki'
+
+    -- TrueZen
+    --use 'Pocco81/true-zen.nvim'
 end)
 
