@@ -118,7 +118,12 @@ return require('packer').startup(function(use)
         config = function() require('plugins.colorizer') end
     })
 
-    -- Vim-Tig
+    -- true-zen
+    use ({
+      'pocco81/true-zen.nvim',
+      config = function() require('plugins.zen') end
+    })
+
     --use 'codeindulgence/vim-tig'
 
     -- Vim Rooter
@@ -126,8 +131,5 @@ return require('packer').startup(function(use)
 
     -- Vimwiki
     --use 'vimwiki/vimwiki'
-
-    -- TrueZen
-    --use 'Pocco81/true-zen.nvim'
 end)
 
