@@ -21,10 +21,10 @@ keymap.set("n", "<C-n>", ":NvimTreeClose<CR>")
 -- Toggleterm
 keymap.set("n", "<C-t>", ":ToggleTerm<CR>")
 
-
--- Gitsigns
-keymap.set("n", "<C-d>", ":Gitsigns toggle_linehl<CR><BAR> :Gitsigns toggle_deleted<CR>")
+-- Telescope neovim-project commands
+keymap.set("n", "<C-p>", ":Telescope neovim-project discover<CR>", { desc = "Discover projects" })
+keymap.set("n", "<C-h>", ":Telescope neovim-project history<CR>", { desc = "Recent projects" })
 
 -- Telescope
---keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>")
---keymap.set("n", "<C-Shift-f>", ":Telescope live_grep<CR>") --idk fix this future tim
+keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>")
+keymap.set("n", "<C-F>", ":Telescope live_grep<CR>")
