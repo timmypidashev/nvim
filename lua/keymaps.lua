@@ -15,8 +15,7 @@ keymap.set("i", "<C-s>", ":w<CR>")
 keymap.set("n", "<D-u", ":undo<CR>")
 
 -- NvimTree
-keymap.set("n", "<C-j>", ":NvimTreeFocus<CR>")
-keymap.set("n", "<C-n>", ":NvimTreeClose<CR>")
+keymap.set("n", "<C-n>", ":lua Snacks.picker.explorer()<CR>")
 
 -- Toggleterm
 keymap.set("n", "<C-t>", ":ToggleTerm<CR>")

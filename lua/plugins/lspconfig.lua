@@ -19,16 +19,6 @@ return {
     dependencies = {
       "williamboman/mason.nvim",
     },
-    opts = {
-      ensure_installed = {
-        "lua_ls",
-        "clangd",
-        "tsserver",
-        "quick_lint_js",
-        "html",
-        "cssls"
-      }
-    },
     config = true,
   },
   {
@@ -61,12 +51,16 @@ return {
         },
       }
 
-      lspconfig.tsserver.setup {
+      lspconfig.ts_ls.setup {
         on_attach = on_attach,
         capabilities = capabilities,
       }
 
       lspconfig.clangd.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      }
+      lspconfig.rust_analyzer.setup {
         on_attach = on_attach,
         capabilities = capabilities,
       }

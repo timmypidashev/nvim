@@ -6,7 +6,7 @@ local cmd = vim.cmd
 -- Tabs!!!
 opt.tabstop		        = 2		    -- The width of a TAB is set to 4
 opt.expandtab		    = true		-- Indents will have a width of 4
-opt.softtabstop		    = 2		    -- The width of tab when pressing enter or backspace
+opt.softtabstop		    = 2    -- The width of tab when pressing enter or backspace
 opt.shiftwidth		    = 2		    -- Indents will have a width of 4
 opt.autoindent          = true      -- Automatically indent
 

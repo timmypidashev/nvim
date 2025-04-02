@@ -12,7 +12,6 @@ return {
           dark0 = "#000000",
         },
       })
-      
       -- Set the colorscheme
       vim.cmd("colorscheme gruvbox")
     end,
