@@ -21,12 +21,7 @@ return {
     },
     opts = {
       ensure_installed = {
-        "lua_ls",
-        "clangd",
-        "tsserver",
-        "quick_lint_js",
-        "html",
-        "cssls"
+        "ts_ls"
       }
     },
     config = true,
@@ -41,36 +36,14 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local on_attach = function(_, _)
-      -- no keybinds yet
+        -- no keybinds yet
       end
-
-      require("mason").setup()
-      require("mason-lspconfig").setup()
-
-      local lspconfig = require("lspconfig")
-
-      lspconfig.lua_ls.setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-          Lua = {
-            diagnostics = {
-              globals = { "vim" },
-            },
-          },
-        },
-      }
-
-      lspconfig.tsserver.setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-      }
-
-      lspconfig.clangd.setup {
+      
+      -- Only configure ts_ls
+      require("lspconfig").ts_ls.setup {
         on_attach = on_attach,
         capabilities = capabilities,
       }
     end,
   },
 }
-
