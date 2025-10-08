@@ -39,11 +39,17 @@ return {
         -- no keybinds yet
       end
       
-      -- Only configure ts_ls
-      require("lspconfig").ts_ls.setup {
-        on_attach = on_attach,
+      -- Use the new vim.lsp.config API (Neovim 0.11+)
+      vim.lsp.config('ts_ls', {
+        cmd = { 'typescript-language-server', '--stdio' },
+        root_markers = { 'package.json', 'tsconfig.json', 'jsconfig.json' },
+        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
         capabilities = capabilities,
-      }
+        on_attach = on_attach,
+      })
+      
+      -- Enable the language server
+      vim.lsp.enable('ts_ls')
     end,
   },
 }
