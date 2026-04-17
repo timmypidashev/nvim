@@ -1,4 +1,4 @@
-# Archived — Neovim Config
+# Archived — nvim
 
 > [!WARNING]
 > **This repository is no longer maintained.**
